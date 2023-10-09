@@ -21,10 +21,11 @@
 
 		<AddImage />
 		<AddShape />
-
+		<div class="h-8 w-px bg-slate-300" />
 		<Duplicate />
 		<Hide />
 		<Delete />
+		<div class="h-8 w-px bg-slate-300" />
 		<button class="flex flex-col py-1 px-2 justify-center items-center btn">
 			<Undo strokeWidth={1.6} />
 			<span class="font-light">Undo</span>
