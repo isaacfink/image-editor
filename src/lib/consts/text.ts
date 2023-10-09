@@ -1,6 +1,8 @@
+import { getRandomString } from '$lib/utils';
 import type { TextBlock } from '../../types';
 
 export const defaultText: TextBlock = {
+	id: getRandomString(28),
 	border: {
 		bottom: 0,
 		color: '#000000',

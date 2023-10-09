@@ -9,6 +9,7 @@
 		editor.update((e) => {
 			e.blocks.push({
 				...defaultText,
+				id: getRandomString(28),
 				name: `text_${getRandomString(5)}`
 			});
 			return e;

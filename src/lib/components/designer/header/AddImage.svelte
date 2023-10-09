@@ -9,6 +9,7 @@
 		editor.update((e) => {
 			e.blocks.push({
 				...defaultImage,
+				id: getRandomString(28),
 				name: `image_${getRandomString(5)}`
 			});
 			return e;

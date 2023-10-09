@@ -4,6 +4,9 @@
 	import AddText from './AddText.svelte';
 	import AddImage from './AddImage.svelte';
 	import AddShape from './AddShape.svelte';
+	import Duplicate from './Duplicate.svelte';
+	import Delete from './Delete.svelte';
+	import Hide from './Hide.svelte';
 
 	const {
 		elements: { close, content, trigger },
@@ -19,18 +22,9 @@
 		<AddImage />
 		<AddShape />
 
-		<button class="flex flex-col py-1 px-2 justify-center items-center btn">
-			<Copy strokeWidth={1.6} />
-			<span class="font-light">Duplicate</span>
-		</button>
-		<button class="flex flex-col py-1 px-2 justify-center items-center btn">
-			<Eye strokeWidth={1.6} />
-			<span class="font-light">Hide</span>
-		</button>
-		<button class="flex flex-col py-1 px-2 justify-center items-center btn">
-			<Trash strokeWidth={1.6} />
-			<span class="font-light">Delete</span>
-		</button>
+		<Duplicate />
+		<Hide />
+		<Delete />
 		<button class="flex flex-col py-1 px-2 justify-center items-center btn">
 			<Undo strokeWidth={1.6} />
 			<span class="font-light">Undo</span>

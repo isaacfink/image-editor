@@ -1,6 +1,8 @@
+import { getRandomString } from '$lib/utils';
 import type { ShapeBlock } from '../../types';
 
 export const defaultShape: ShapeBlock = {
+	id: getRandomString(28),
 	border: {
 		bottom: 0,
 		color: '#000000',

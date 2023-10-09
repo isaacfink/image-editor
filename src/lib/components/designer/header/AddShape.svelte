@@ -11,6 +11,7 @@
 		editor.update((e) => {
 			e.blocks.push({
 				...defaultShape,
+				id: getRandomString(28),
 				shape: shape,
 				name: `image_${getRandomString(5)}`
 			});
@@ -38,6 +39,8 @@
 	use:content
 >
 	<button
+		use:close
+		{...$close}
 		class="rounded-md hover:bg-slate-100 text-slate-600 hover:text-slate-700 flex items-center justify-start gap-x-2 py-1 px-2"
 		on:click={() => addNewBlock('star')}
 	>
@@ -45,6 +48,8 @@
 		<span>star</span>
 	</button>
 	<button
+		use:close
+		{...$close}
 		class="rounded-md hover:bg-slate-100 text-slate-600 hover:text-slate-700 flex items-center justify-start gap-x-2 py-1 px-2"
 		on:click={() => addNewBlock('circle')}
 	>
@@ -52,6 +57,8 @@
 		<span>circle</span>
 	</button>
 	<button
+		use:close
+		{...$close}
 		class="rounded-md hover:bg-slate-100 text-slate-600 hover:text-slate-700 flex items-center justify-start gap-x-2 py-1 px-2"
 		on:click={() => addNewBlock('rect')}
 	>

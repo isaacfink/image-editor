@@ -27,7 +27,11 @@
 		<div class="shrink-0 bg-white border-l px-3 py-3 w-72">
 			<BlocksList />
 		</div>
-		<div class="bg-slate-200 grow" />
+		<div class="bg-slate-200 grow max-h-full overflow-y-auto">
+			<pre>
+				{JSON.stringify($editor, null, 2)}
+			</pre>
+		</div>
 		<div class="bg-white shrink-0 px-2 py-3 max-h-full overflow-y-auto">
 			<h3 class="h3">layout</h3>
 			<div class="grid grid-cols-5 items-center gap-x-2 mt-2">

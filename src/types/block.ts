@@ -1,4 +1,5 @@
 export interface BaseBlock {
+	id: string;
 	name: string;
 	width: number;
 	height: number;

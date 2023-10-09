@@ -1,6 +1,8 @@
+import { getRandomString } from '$lib/utils';
 import type { ImageBlock } from '../../types';
 
 export const defaultImage: ImageBlock = {
+	id: getRandomString(28),
 	border: {
 		bottom: 0,
 		color: '#000000',
