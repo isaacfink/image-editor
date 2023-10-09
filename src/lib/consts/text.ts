@@ -1,5 +1,5 @@
 import { getRandomString } from '$lib/utils';
-import type { TextBlock } from '../../types';
+import type { TextBlock } from '$types';
 
 export const defaultText: TextBlock = {
 	id: getRandomString(28),

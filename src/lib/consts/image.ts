@@ -1,5 +1,5 @@
 import { getRandomString } from '$lib/utils';
-import type { ImageBlock } from '../../types';
+import type { ImageBlock } from '$types';
 
 export const defaultImage: ImageBlock = {
 	id: getRandomString(28),

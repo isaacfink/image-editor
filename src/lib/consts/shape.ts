@@ -1,5 +1,5 @@
 import { getRandomString } from '$lib/utils';
-import type { ShapeBlock } from '../../types';
+import type { ShapeBlock } from '$types';
 
 export const defaultShape: ShapeBlock = {
 	id: getRandomString(28),

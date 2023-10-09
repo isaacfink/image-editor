@@ -11,6 +11,9 @@ dependencies:
   lucide-svelte:
     specifier: ^0.284.0
     version: 0.284.0(svelte@4.0.5)
+  svelte-dnd-action:
+    specifier: ^0.9.31
+    version: 0.9.31(svelte@4.0.5)
 
 devDependencies:
   '@sveltejs/adapter-auto':
@@ -2078,6 +2081,14 @@ packages:
       - stylus
       - sugarss
     dev: true
+
+  /svelte-dnd-action@0.9.31(svelte@4.0.5):
+    resolution: {integrity: sha512-rUracVJOQkh1g5mCF4TM/IM4f41eUFoNAcO2ctCY4czKyprmPSQipe64vhp+OptWwtw7t8dflD7IIPHvjCwpmQ==}
+    peerDependencies:
+      svelte: '>=3.23.0'
+    dependencies:
+      svelte: 4.0.5
+    dev: false
 
   /svelte-eslint-parser@0.30.0(svelte@4.0.5):
     resolution: {integrity: sha512-H0Cn2TKr70DU9p/Gb04CfwtS7eK28MYumrHYPaDNkIFbfwGDLADpbERBn7u8G1Rcm2RMr2/mL6mq0J2e8iKFlA==}

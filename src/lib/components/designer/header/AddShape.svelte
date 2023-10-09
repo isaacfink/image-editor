@@ -3,7 +3,7 @@
 	import { defaultShape } from '$lib/consts';
 	import { Image, Star, Circle, Square } from 'lucide-svelte';
 	import { getRandomString } from '$lib/utils';
-	import type { ShapeBlock } from '../../../../types';
+	import type { ShapeBlock } from '$types';
 	import { createPopover } from '@melt-ui/svelte';
 
 	const editor = getEditor();

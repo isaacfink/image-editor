@@ -12,10 +12,7 @@
 		states: { open }
 	} = createPopover({
 		positioning: {
-			offset: {
-				crossAxis: -1000,
-				mainAxis: -1000
-			}
+			placement: 'left'
 		}
 	});
 </script>

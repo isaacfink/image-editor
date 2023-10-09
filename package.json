@@ -37,6 +37,7 @@
 	"type": "module",
 	"dependencies": {
 		"@melt-ui/svelte": "^0.52.0",
-		"lucide-svelte": "^0.284.0"
+		"lucide-svelte": "^0.284.0",
+		"svelte-dnd-action": "^0.9.31"
 	}
 }

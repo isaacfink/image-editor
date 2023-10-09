@@ -1,12 +1,13 @@
 <script>
 	import { createDialog } from '@melt-ui/svelte';
-	import { Copy, Eye, Image, Redo, Star, Trash, Type, Undo } from 'lucide-svelte';
 	import AddText from './AddText.svelte';
 	import AddImage from './AddImage.svelte';
 	import AddShape from './AddShape.svelte';
 	import Duplicate from './Duplicate.svelte';
 	import Delete from './Delete.svelte';
 	import Hide from './Hide.svelte';
+	import Undo from './Undo.svelte';
+	import Redo from './Redo.svelte';
 
 	const {
 		elements: { close, content, trigger },
@@ -26,14 +27,8 @@
 		<Hide />
 		<Delete />
 		<div class="h-8 w-px bg-slate-300" />
-		<button class="flex flex-col py-1 px-2 justify-center items-center btn">
-			<Undo strokeWidth={1.6} />
-			<span class="font-light">Undo</span>
-		</button>
-		<button class="flex flex-col py-1 px-2 justify-center items-center btn">
-			<Redo strokeWidth={1.6} />
-			<span class="font-light">Redo</span>
-		</button>
+		<Undo />
+		<Redo />
 	</div>
 	<button class="rounded p-2 bg-slate-100 text-slate-800" {...$trigger} use:trigger>Export</button>
 </div>
