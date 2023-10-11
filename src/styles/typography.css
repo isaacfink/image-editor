@@ -1,8 +1,8 @@
 @layer components {
 	.label {
-		@apply text-slate-700 text-sm;
+		@apply text-slate-700 dark:text-slate-400 text-sm;
 	}
 	.h3 {
-		@apply text-slate-800 text-lg;
+		@apply text-slate-800 dark:text-slate-200 text-lg;
 	}
 }

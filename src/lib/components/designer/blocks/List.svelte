@@ -41,6 +41,6 @@
 
 <style lang="postcss">
 	:global(.dropzone) {
-		@apply border border-slate-200 rounded-md bg-slate-100;
+		@apply border border-slate-200 rounded-md bg-slate-100/50 dark:bg-slate-700 dark:border-slate-800;
 	}
 </style>

@@ -13,6 +13,9 @@
 	}
 </script>
 
-{#each block.text.split('\n') as line}
-	<text on:keypress on:click={handleClick}>{line}</text>
-{/each}
+<!-- svelte-ignore a11y-no-static-element-interactions -->
+<text x={block.x} y={block.y} on:keypress on:click={handleClick}>
+	{#each block.text.split('\n') as line}
+		<tspan x={block.x} dy="{block.font.lineheight}em">{line}</tspan>
+	{/each}
+</text>

@@ -38,10 +38,10 @@
 
 <button
 	on:click={selectBlock}
-	class="rounded flex justify-between items-center py-2 px-3 text-slate-600 transition group w-full {$editor.activeBlock &&
+	class="rounded flex justify-between items-center py-2 px-3 text-slate-600 dark:text-slate-300 transition group w-full {$editor.activeBlock &&
 	$editor.activeBlock.id === block.id
-		? 'bg-slate-200'
-		: ' hover:bg-slate-100'}"
+		? 'bg-slate-200 dark:bg-slate-600'
+		: ' hover:bg-slate-100 dark:hover:bg-slate-700'}"
 >
 	<div class="flex items-center gap-x-4 grow">
 		<div class="flex-shrink-0 w-4 h-4 relative group/icon">
