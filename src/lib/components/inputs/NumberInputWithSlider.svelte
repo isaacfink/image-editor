@@ -26,7 +26,12 @@
 	$: value && dispatch('change', value);
 </script>
 
-<span {...$root} use:root class="relative flex h-[20px] w-[105px] shrink-0 items-center mr-6">
+<span
+	{...$root}
+	aria-disabled="false"
+	use:root
+	class="relative flex h-[20px] w-[105px] shrink-0 items-center mr-6"
+>
 	<span class="block h-[3px] w-full bg-slate-100">
 		<span {...$range} use:range class="h-[3px] bg-slate-700" />
 	</span>

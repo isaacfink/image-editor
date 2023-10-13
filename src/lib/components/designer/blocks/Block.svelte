@@ -20,7 +20,7 @@
 
 	const editor = getEditor();
 	function selectBlock() {
-		editor.update((e) => {
+		editor.push((e) => {
 			e.activeBlock = block;
 			return e;
 		});
@@ -38,8 +38,8 @@
 
 <button
 	on:click={selectBlock}
-	class="rounded flex justify-between items-center py-2 px-3 text-slate-600 dark:text-slate-300 transition group w-full {$editor.activeBlock &&
-	$editor.activeBlock.id === block.id
+	class="rounded flex justify-between items-center py-2 px-3 text-slate-600 dark:text-slate-300 transition group w-full {$editor
+		.current.activeBlock && $editor.current.activeBlock.id === block.id
 		? 'bg-slate-200 dark:bg-slate-600'
 		: ' hover:bg-slate-100 dark:hover:bg-slate-700'}"
 >
@@ -74,9 +74,10 @@
 				on:blur={() => (editingMode = false)}
 				type="text"
 				bind:value={block.name}
+				class="w-full mr-1 px-0.5"
 			/>
 		{:else}
-			<button class="grow w-full text-left" on:dblclick={handleEditingMode}
+			<button class="grow w-full text-left px-0.5" on:dblclick={handleEditingMode}
 				>{block.name || 'Enter name...'}</button
 			>
 		{/if}

@@ -8,7 +8,7 @@
 
 	const editor = getEditor();
 	function addNewBlock(shape: ShapeBlock['shape']) {
-		editor.update((e) => {
+		editor.push((e) => {
 			e.blocks.push({
 				...defaultShape,
 				id: getRandomString(28),

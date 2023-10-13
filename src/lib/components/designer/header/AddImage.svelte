@@ -6,7 +6,7 @@
 
 	const editor = getEditor();
 	function addNewBlock() {
-		editor.update((e) => {
+		editor.push((e) => {
 			e.blocks.push({
 				...defaultImage,
 				id: getRandomString(28),

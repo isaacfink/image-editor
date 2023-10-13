@@ -1,22 +1,21 @@
 <script lang="ts">
 	import { Header } from '$lib/components/designer';
-	import type { Editor } from '$types';
+	import type { Editor, SnapPointsStore } from '$types';
 	import { writable } from 'svelte/store';
 	import { setContext } from 'svelte';
 	import { BlocksList } from '$lib/components/designer/blocks';
 	import { SideBar } from '$lib/components/designer/activeBlock';
 	import { Canvas } from '$lib/components/designer/canvas';
 	import { defaultEditor } from '$lib/consts';
+	import { getAllSnapPoints } from '$lib/utils/snapPoints';
+	import { createStack } from '$lib/utils';
+	import AddText from '$lib/components/designer/header/AddText.svelte';
 
-	const components: { type: 'shape' | 'image' | 'text'; name: string }[] = [
-		{ type: 'shape', name: 'Rectangle' },
-		{ type: 'text', name: 'Circle' },
-		{ type: 'image', name: 'Triangle' }
-	];
-
-	const editor = writable<Editor>(defaultEditor);
+	const editor = createStack<Editor>(defaultEditor);
+	const snapPoints = writable<SnapPointsStore>(getAllSnapPoints($editor.current));
 
 	setContext('editor', editor);
+	setContext('snapPoints', snapPoints);
 </script>
 
 <div class="max-h-screen w-screen flex flex-col min-h-screen dark:bg-slate-900 overflow-hidden">

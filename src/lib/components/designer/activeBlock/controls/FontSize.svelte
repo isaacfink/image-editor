@@ -5,9 +5,9 @@
 	const editor = getEditor();
 </script>
 
-{#if $editor.activeBlock && $editor.activeBlock.type === 'text'}
+{#if $editor.current.activeBlock && $editor.current.activeBlock.type === 'text'}
 	<div class="flex justify-between items-center">
 		<span class="label">Size</span>
-		<NumberInputWithButtons bind:value={$editor.activeBlock.font.size} />
+		<NumberInputWithButtons bind:value={$editor.current.activeBlock.font.size} />
 	</div>
 {/if}

@@ -33,7 +33,10 @@ export const defaultText: TextBlock = {
 		lineheight: 1,
 		shadow: null,
 		size: 16,
-		stroke: null,
+		stroke: {
+			color: '#000000',
+			width: 0
+		},
 		transform: null,
 		vAlign: 'start',
 		weight: 'normal'

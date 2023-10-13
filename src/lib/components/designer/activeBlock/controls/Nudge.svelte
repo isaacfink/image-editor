@@ -7,7 +7,7 @@
 	const MOVE_AMOUNT = 5;
 
 	function handleMoveUp() {
-		editor.update((e) => {
+		editor.push((e) => {
 			if (e.activeBlock) {
 				e.activeBlock.y = Math.max(0, e.activeBlock.y - MOVE_AMOUNT);
 			}
@@ -16,7 +16,7 @@
 	}
 
 	function handleMoveRight() {
-		editor.update((e) => {
+		editor.push((e) => {
 			if (e.activeBlock) {
 				e.activeBlock.x = Math.min(
 					e.canvas.width + e.activeBlock.width,
@@ -28,10 +28,10 @@
 	}
 
 	function handleMoveDown() {
-		editor.update((e) => {
+		editor.push((e) => {
 			if (e.activeBlock) {
 				e.activeBlock.y = Math.min(
-					e.canvas.height + e.activeBlock.height,
+					e.canvas.height - e.activeBlock.height,
 					e.activeBlock.y + MOVE_AMOUNT
 				);
 			}
@@ -40,7 +40,7 @@
 	}
 
 	function handleMoveLeft() {
-		editor.update((e) => {
+		editor.push((e) => {
 			if (e.activeBlock) {
 				e.activeBlock.x = Math.max(0, e.activeBlock.x - MOVE_AMOUNT);
 			}
@@ -49,7 +49,7 @@
 	}
 </script>
 
-{#if $editor.activeBlock}
+{#if $editor.current.activeBlock}
 	<div class="flex items-center justify-between my-3">
 		<p class="label">Nudge</p>
 		<div class="flex items-center justify-end gap-x-2">

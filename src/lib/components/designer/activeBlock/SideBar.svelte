@@ -8,12 +8,12 @@
 	const editor = getEditor();
 </script>
 
-{#if $editor.activeBlock === null}
+{#if $editor.current.activeBlock === null}
 	<EditorSettings />
-{:else if $editor.activeBlock.type === 'image'}
+{:else if $editor.current.activeBlock.type === 'image'}
 	<ImageSettings />
-{:else if $editor.activeBlock.type === 'shape'}
+{:else if $editor.current.activeBlock.type === 'shape'}
 	<ShapeSettings />
-{:else if $editor.activeBlock.type === 'text'}
+{:else if $editor.current.activeBlock.type === 'text'}
 	<TextSettings />
 {/if}

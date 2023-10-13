@@ -6,11 +6,11 @@
 
 	const editor = getEditor();
 
-	function handleDndConsider(e: CustomEvent<{ items: typeof $editor.blocks }>) {
-		$editor.blocks = e.detail.items;
+	function handleDndConsider(e: CustomEvent<{ items: typeof $editor.current.blocks }>) {
+		$editor.current.blocks = e.detail.items;
 	}
-	function handleDndFinalize(e: CustomEvent<{ items: typeof $editor.blocks }>) {
-		$editor.blocks = e.detail.items;
+	function handleDndFinalize(e: CustomEvent<{ items: typeof $editor.current.blocks }>) {
+		$editor.current.blocks = e.detail.items;
 	}
 </script>
 
@@ -24,7 +24,7 @@
 <div
 	class="flex flex-col gap-y-1 mt-3 list border border-transparent"
 	use:dndzone={{
-		items: $editor.blocks,
+		items: $editor.current.blocks,
 		flipDurationMs: 100,
 		dropTargetClasses: ['dropzone'],
 		dropTargetStyle: {}
@@ -32,7 +32,7 @@
 	on:consider={handleDndConsider}
 	on:finalize={handleDndFinalize}
 >
-	{#each $editor.blocks as block (block.id)}
+	{#each $editor.current.blocks as block (block.id)}
 		<div class="">
 			<Block bind:block />
 		</div>

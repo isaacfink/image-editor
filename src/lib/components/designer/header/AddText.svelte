@@ -6,7 +6,8 @@
 
 	const editor = getEditor();
 	function addNewBlock() {
-		editor.update((e) => {
+		editor.push((e) => {
+			console.log(e);
 			e.blocks.push({
 				...defaultText,
 				id: getRandomString(28),

@@ -14,7 +14,7 @@ export interface TextBlock extends BaseBlock {
 		size: number;
 		lineheight: number;
 		charSpacing: number;
-		hAlign: 'start' | 'center' | 'end';
+		hAlign: 'start' | 'middle' | 'end';
 		vAlign: 'start' | 'center' | 'end';
 		italic: boolean;
 		decoration: {
@@ -32,6 +32,6 @@ export interface TextBlock extends BaseBlock {
 		stroke: {
 			color: string;
 			width: number;
-		} | null;
+		};
 	};
 }

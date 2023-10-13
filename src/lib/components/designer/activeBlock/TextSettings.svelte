@@ -16,7 +16,7 @@
 	const editor = getEditor();
 </script>
 
-{#if $editor.activeBlock && $editor.activeBlock.type === 'text'}
+{#if $editor.current.activeBlock && $editor.current.activeBlock.type === 'text'}
 	<h3 class="h3">Layout</h3>
 	<div class="w-full h-px bg-slate-300 my-3" />
 	<Size />
@@ -49,7 +49,7 @@
 		cols="30"
 		rows="10"
 		class="rounded-md border border-slate-300 w-full"
-		bind:value={$editor.activeBlock.text}
+		bind:value={$editor.current.activeBlock.text}
 	/>
 	<div class="w-full h-px bg-slate-300 my-3" />
 

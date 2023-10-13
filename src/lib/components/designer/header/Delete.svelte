@@ -5,7 +5,7 @@
 	const editor = getEditor();
 
 	function handleDelete() {
-		editor.update((e) => {
+		editor.push((e) => {
 			if (e.activeBlock !== null) {
 				let id = e.activeBlock.id;
 				e.blocks = e.blocks.filter((b) => b.id !== id);
@@ -17,7 +17,7 @@
 </script>
 
 <button
-	disabled={$editor.activeBlock == null}
+	disabled={$editor.current.activeBlock == null}
 	class="flex flex-col py-1 px-2 justify-center items-center btn disabled:opacity-50"
 	on:click={handleDelete}
 >
